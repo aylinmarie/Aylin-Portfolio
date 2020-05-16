@@ -24,7 +24,10 @@
     "eslint": "^7.0.0",
     "eslint-config-react-app": "^5.2.1",
     "eslint-plugin-react": "^7.20.0",
-    "prettier": "2.0.5"
+    "prettier": "2.0.5",
+    "prettier-eslint": "^9.0.1",
+    "prettier-eslint-cli": "^5.0.0",
+    "prettier-stylelint": "^0.4.2"
   },
   "keywords": [
     "gatsby"

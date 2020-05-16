@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header>
     <nav>
       <Link
@@ -16,12 +16,12 @@ const Header = ({ siteTitle }) => (
           About
       </Link>
       <Link
-        to="/"
+        to="/travel"
       >
           Travel
       </Link>
       <Link
-        to="/"
+        to="/portfolio"
       >
           Portfolio
       </Link>
