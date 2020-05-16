@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+import {ButtonLink} from "../components/Button"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -10,7 +10,7 @@ const IndexPage = () => (
     <section>
       <h1>Merhaba, I'm Aylin</h1>
       <p className="caption">I’m an Atlanta based designer and developer who loves creating clean and minimal designs.</p>
-      <Link to="/page-2/">Learn More</Link>
+      <ButtonLink href="/about">Learn More</ButtonLink>
     </section>
 
     <section>

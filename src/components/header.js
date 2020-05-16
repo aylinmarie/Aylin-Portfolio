@@ -5,26 +5,26 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header>
     <nav>
-        <Link
-          to="/"
-        >
-          {siteTitle}
-        </Link>
-        <Link
-          to="/"
-        >
+      <Link
+        to="/"
+      >
+        Home
+      </Link>
+      <Link
+        to="/about"
+      >
           About
-        </Link>
-        <Link
-          to="/"
-        >
+      </Link>
+      <Link
+        to="/"
+      >
           Travel
-        </Link>
-        <Link
-          to="/"
-        >
+      </Link>
+      <Link
+        to="/"
+      >
           Portfolio
-        </Link>
+      </Link>
     </nav>
   </header>
 )
