@@ -3,7 +3,6 @@ import React from "react"
 import Layout from "../components/layout"
 import { ButtonLink } from "../components/Button"
 import SEO from "../components/seo"
-import Button from '@material-ui/core/Button';
 import stylesheet from './home.module.less';
 
 const IndexPage = () => (
@@ -12,10 +11,7 @@ const IndexPage = () => (
     <section id="intro" className={stylesheet.intro}>
       <h1>Merhaba, I'm Aylin</h1>
       <p className="caption">I’m an Atlanta based designer and developer who loves creating clean and minimal designs.</p>
-      <ButtonLink href="/about">Learn More</ButtonLink>
-      <Button variant="contained" color="primary">
-      Hello World
-      </Button>
+      <ButtonLink href="/about">About Me</ButtonLink>
     </section>
 
     <section id="travel">
@@ -27,7 +23,7 @@ const IndexPage = () => (
     <section id="portfolio">
       <h2>Portfolio</h2>
       <p className="caption">My work in design and development</p>
-      <ButtonLink href="/portfolio">Learn More</ButtonLink>
+      <ButtonLink href="/portfolio">My Work</ButtonLink>
     </section>
   </Layout>
 )

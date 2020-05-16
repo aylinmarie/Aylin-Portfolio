@@ -11,6 +11,10 @@ body {
 section {
     margin-top: @base-unit * 16;
     padding: (@base-unit * 8) (@base-unit * 16);
+
+    &:first-of-type {
+        margin-top: 0;
+    }
 }
 .caption {
     text-transform: uppercase;
