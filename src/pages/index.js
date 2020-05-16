@@ -11,9 +11,9 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <section>
-    <h1>Merhaba, I'm Aylin</h1>
-    <p className="caption">I’m an Atlanta based designer and developer who loves creating clean and minimal designs.</p>
-    <Link to="/page-2/">Learn More</Link>
+      <h1>Merhaba, I'm Aylin</h1>
+      <p className="caption">I’m an Atlanta based designer and developer who loves creating clean and minimal designs.</p>
+      <Link to="/page-2/">Learn More</Link>
     </section>
 
     <section>
