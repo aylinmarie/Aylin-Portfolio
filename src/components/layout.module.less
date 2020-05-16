@@ -2,8 +2,6 @@
 
 header {
   padding: (@base-unit * 8) 5%;
-  background-color: transparent;
-  position: fixed;
 
   nav {
     display: flex;
@@ -16,7 +14,11 @@ header {
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
-    color: white;
+    color: @dark-grey;
+
+    &:hover {
+      color: darken(@dark-grey, 10);
+    }
 
     &:first-of-type {
       margin-left: 0;

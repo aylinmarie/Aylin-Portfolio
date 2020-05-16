@@ -42,7 +42,7 @@ const IndexPage = () => {
         </Grid>
       </section>
 
-      <section id="portfolio">
+      <section id="portfolio" className={stylesheet.portfolio}>
         <Grid container spacing={10}>
           <Grid item xs={12} sm={5}>
             <h2>Portfolio</h2>
