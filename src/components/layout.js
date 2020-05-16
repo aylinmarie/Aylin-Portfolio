@@ -13,7 +13,17 @@ const Layout = ({ children }) => {
       <div>
         <main className={stylesheet.main}>{children}</main>
         <footer>
-          <p>© {new Date().getFullYear()} aylin marie</p>
+          <div>
+            <strong>Contact Me</strong>
+            <p>hello@aylinmarie.co</p>
+            
+            <strong>Social</strong>
+            <a href="https://twitter.com/aylin_marie" target="_blank" rel="noreferrer">Twitter</a>
+            <a href="https://www.instagram.com/aylinmcg/" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
+          <div>
+            <p>© {new Date().getFullYear()} aylin marie</p>
+          </div>
         </footer>
       </div>
     </div>

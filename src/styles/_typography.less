@@ -1,14 +1,37 @@
 @import './tokens.less';
 
 // Typography
-h1, h2 {
+h1, .h1, h2, .h2 {
   font-family: @typeface-brand;
   color: @dark-grey;
   text-transform: lowercase;
 }
-  
+
+h1, .h1 {
+  font-size: 72px;
+}
+ 
+h2, .h2 {
+  font-size: 56px;
+}
+
+h3, .h3 {
+  font-size: 32px;
+}
+
 p, a {
+  display: block;
   font-family: @typeface-base;
-  line-height: 1.2;
-  font-weight: 300;
+}
+
+a {
+  transition: color 0.2s ease;
+  color: @orange;
+  &:hover {
+    color: darken(@orange, 10);
+  }
+}
+
+strong {
+  font-family: @typeface-base;
 }
