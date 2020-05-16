@@ -4,14 +4,27 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import '../styles/global.less'
+
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    <section>
     <h1>Merhaba, I'm Aylin</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <p className="caption">I’m an Atlanta based designer and developer who loves creating clean and minimal designs.</p>
+    <Link to="/page-2/">Learn More</Link>
+    </section>
+
+    <section>
+      <h2>Travel</h2>
+      <p>A few snapshots of where I’ve been</p>
+    </section>
+
+    <section>
+      <h2>Portfolio</h2>
+      <p>My work in design and development</p>
+    </section>
   </Layout>
 )
 
