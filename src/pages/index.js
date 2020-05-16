@@ -16,11 +16,13 @@ const IndexPage = () => (
     <section>
       <h2>Travel</h2>
       <p className="caption">A few snapshots of where I’ve been</p>
+      <ButtonLink href="/travel">Learn More</ButtonLink>
     </section>
 
     <section>
       <h2>Portfolio</h2>
       <p className="caption">My work in design and development</p>
+      <ButtonLink href="/portfolio">Learn More</ButtonLink>
     </section>
   </Layout>
 )
