@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Header from "./header"
+import '../styles/global.less'
 import stylesheet from  "./layout.module.less"
 
 const Layout = ({ children }) => {
@@ -10,9 +11,9 @@ const Layout = ({ children }) => {
     <div className={stylesheet.root}>
       <Header />
       <div>
-        <main>{children}</main>
+        <main className={stylesheet.main}>{children}</main>
         <footer>
-          © {new Date().getFullYear()} aylin marie
+          <p>© {new Date().getFullYear()} aylin marie</p>
         </footer>
       </div>
     </div>

@@ -4,9 +4,6 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import '../styles/global.less'
-
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -18,12 +15,12 @@ const IndexPage = () => (
 
     <section>
       <h2>Travel</h2>
-      <p>A few snapshots of where I’ve been</p>
+      <p className="caption">A few snapshots of where I’ve been</p>
     </section>
 
     <section>
       <h2>Portfolio</h2>
-      <p>My work in design and development</p>
+      <p className="caption">My work in design and development</p>
     </section>
   </Layout>
 )
