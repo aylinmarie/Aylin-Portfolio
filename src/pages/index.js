@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { ButtonLink } from "../components/Button"
 import SEO from "../components/seo"
-
+import Button from '@material-ui/core/Button';
 import stylesheet from './home.module.less';
 
 const IndexPage = () => (
@@ -13,6 +13,9 @@ const IndexPage = () => (
       <h1>Merhaba, I'm Aylin</h1>
       <p className="caption">I’m an Atlanta based designer and developer who loves creating clean and minimal designs.</p>
       <ButtonLink href="/about">Learn More</ButtonLink>
+      <Button variant="contained" color="primary">
+      Hello World
+      </Button>
     </section>
 
     <section id="travel">

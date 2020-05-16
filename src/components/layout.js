@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import Grid from '@material-ui/core/Grid';
+
 import Header from "./header"
 import '../styles/global.less'
 import stylesheet from  "./layout.module.less"
@@ -13,17 +15,20 @@ const Layout = ({ children }) => {
       <div>
         <main className={stylesheet.main}>{children}</main>
         <footer>
-          <div>
-            <strong>Contact Me</strong>
-            <p>hello@aylinmarie.co</p>
+          <Grid container justify="space-between"
+            alignItems="center">
+            <Grid item>
+              <strong>Contact Me</strong>
+              <p>hello@aylinmarie.co</p>
             
-            <strong>Social</strong>
-            <a href="https://twitter.com/aylin_marie" target="_blank" rel="noreferrer">Twitter</a>
-            <a href="https://www.instagram.com/aylinmcg/" target="_blank" rel="noreferrer">Instagram</a>
-          </div>
-          <div>
-            <p>© {new Date().getFullYear()} aylin marie</p>
-          </div>
+              <strong>Social</strong>
+              <a href="https://twitter.com/aylin_marie" target="_blank" rel="noreferrer">Twitter</a>
+              <a href="https://www.instagram.com/aylinmcg/" target="_blank" rel="noreferrer">Instagram</a>
+            </Grid>
+            <Grid item>
+              <p>© {new Date().getFullYear()} aylin marie</p>
+            </Grid>
+          </Grid>
         </footer>
       </div>
     </div>
