@@ -1,7 +1,9 @@
 @import '../styles/tokens.less';
 
 header {
-  padding: @base-unit * 8 @base-unit * 16;
+  padding: (@base-unit * 8) 5%;
+  background-color: transparent;
+  position: fixed;
 
   nav {
     display: flex;
@@ -14,6 +16,7 @@ header {
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
+    color: white;
 
     &:first-of-type {
       margin-left: 0;
@@ -23,7 +26,7 @@ header {
 
 footer {
   background-color: @dark-grey;
-  padding: @base-unit * 8 @base-unit * 16;
+  padding: (@base-unit * 8) 5%;
   margin-top: @base-unit * 16;;
 
   * {
