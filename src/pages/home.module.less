@@ -26,12 +26,20 @@
 .portfolio {
     position: relative;
 
-    .portfolioAccent1 {
+    .portfolioAccent1, .portfolioAccent2 {
         position: absolute;
         max-width: 350px;
+        bottom: 0;
+        z-index: -1;
+    }
+    .portfolioAccent1 {
         width: 15vw;
         left: 0;
         bottom: 0;
-        z-index: -1;
+    }
+    .portfolioAccent2 {
+        width: 50vw;
+        right: 0;
+        bottom: 0;
     }
 }

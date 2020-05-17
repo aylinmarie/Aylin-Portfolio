@@ -15,8 +15,7 @@ import travelPic from '../images/travel_main.jpg';
 // Section Illustrations
 import travelAccent from '../images/travel_accent.svg';
 import portfolioAccent1 from '../images/portfolio_accent_1.svg';
-
-
+import portfolioAccent2 from '../images/portfolio_accent_2.svg';
 
 const IndexPage = () => {
   return (
@@ -59,6 +58,7 @@ const IndexPage = () => {
           </Grid>
           <Grid item xs={12} sm={7}>
             <img src={portfolioPic} alt="Camille Simone logo" />
+            <img className={stylesheet.portfolioAccent2} src={portfolioAccent2} alt="" />
           </Grid>
         </Grid>
       </section>
