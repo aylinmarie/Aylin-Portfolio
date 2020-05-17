@@ -7,9 +7,15 @@ import { ButtonLink } from "../components/Button"
 import SEO from "../components/seo"
 import stylesheet from './home.module.less';
 
+// Images
 import mainPic from '../images/pic_main.jpg';
 import portfolioPic from '../images/portfolio_main.png';
 import travelPic from '../images/travel_main.jpg';
+
+// Section Illustrations
+import travelAccent from '../images/travel_accent.svg';
+import portfolioAccent1 from '../images/portfolio_accent_1.svg';
+
 
 
 const IndexPage = () => {
@@ -29,7 +35,7 @@ const IndexPage = () => {
         </Grid>
       </section>
 
-      <section id="travel">
+      <section id="travel" className={stylesheet.travel}>
         <Grid container spacing={10}>
           <Grid item xs={12} sm={7}>
             <img src={travelPic} alt="Winslow building in Helsinki, Finland" />
@@ -38,6 +44,7 @@ const IndexPage = () => {
             <h2>Travel</h2>
             <p className="caption">A few snapshots of where I’ve been</p>
             <ButtonLink href="/travel">Learn More</ButtonLink>
+            <img className={stylesheet.travelAccent} src={travelAccent} alt="" />
           </Grid>
         </Grid>
       </section>
@@ -48,6 +55,7 @@ const IndexPage = () => {
             <h2>Portfolio</h2>
             <p className="caption">My work in design and development</p>
             <ButtonLink href="/portfolio">My Work</ButtonLink>
+            <img className={stylesheet.portfolioAccent1} src={portfolioAccent1} alt="" />
           </Grid>
           <Grid item xs={12} sm={7}>
             <img src={portfolioPic} alt="Camille Simone logo" />
