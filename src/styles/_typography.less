@@ -21,13 +21,14 @@ h2, .h2 {
 
 h3, .h3 {
   font-family: @typeface-base;
+  font-family: 22px;
   text-transform: uppercase;
   letter-spacing: .15em;
   font-weight: 400;
   color: @grey;
 }
 
-p {
+p, figcaption {
   display: block;
   font-family: @typeface-base;
 }
@@ -40,6 +41,10 @@ a {
   &:hover {
     color: darken(@orange, 10);
   }
+}
+
+figcaption {
+  font-size: 14px;
 }
 
 strong {
