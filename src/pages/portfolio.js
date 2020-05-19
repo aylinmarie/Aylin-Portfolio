@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,38 +13,23 @@ import bor from '../images/portfolio/bor_portfolio.png'
 import oyt from '../images/portfolio/oyt_portfolio.png'
 
 const PortfolioItems = [
-  {name:'Aylin Marie', src: aylin, dataClass:'design',},
-  {name:'Book of Rhymes', src: bor, dataClass:'code',},
-  {name:'OneYoungTraveler', src: oyt, dataClass:'design',},
+  {name:'Aylin Marie', src: aylin, category:['all','design'],},
+  {name:'Book of Rhymes', src: bor, category:['all','code'],},
+  {name:'OneYoungTraveler', src: oyt, category:['all','design'],},
 ]
 
 const Portfolio = () => { 
-  const listItems = document.querySelectorAll('.main li');
-  const allimages = document.querySelectorAll('.main .container-fluid .images');
-  function toggleActiveClass(active){
-    listItems.forEach(item => {
-      item.classList.remove('active');
-    })
-    active.classList.add('active');
-  }
- 
-  function toggleimages(dataClass){
-    if(dataClass === 'all'){
-      for(let i = 0; i<allimages.length; i++){
-        allimages[i].style.display = 'block';
-      }
-    }else{
-      for(let i = 0; i<allimages.length; i++)
-        allimages[i].dataset.class === dataClass ? allimages[i].style.display = 'block' : allimages[i].style.display = 'none';
-    }
-  }
- 
-  for(let i = 0; i < listItems.length; i++){
-    listItems[i].addEventListener('click', function(){
-      toggleActiveClass(listItems[i]);
-      toggleimages(listItems[i].dataset.class);
-    });
-  }
+  const [filter, setFilter] = useState('all');
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    setProjects(PortfolioItems);
+  }, []);
+  useEffect(() => {
+    setProjects([]);
+    const filtered = PortfolioItems.map(p => ({ ...p, filtered: p.category.includes(filter) }));
+    setProjects(filtered);
+  }, [filter]);
+  
   return (
     <Layout>
       <SEO title="Portfolio" />
@@ -54,18 +39,17 @@ const Portfolio = () => {
       </section>
       <section>
         <ul className={stylesheet.nav}>
-          <li className="h3" data-class="all">All</li>
-          <li className="h3" data-class="design">Design</li>
-          <li className="h3" data-class="code">Code</li>
+          <li className="h3" active={(filter === 'all').toString()} onClick={() => setFilter('all')}>All</li>
+          <li className="h3" active={(filter === 'design').toString()} onClick={() => setFilter('design')}>Design</li>
+          <li className="h3" active={(filter === 'code').toString()} onClick={() => setFilter('code')}>Code</li>
         </ul>
 
         <Grid container className={stylesheet.gallery} spacing={4}>
-          {PortfolioItems.map((item)=> { 
-            return(
-              <Grid item key={item.name} data-class={item.dataClass} xs={12} sm={6} md={4}>
-                <img src={item.src} alt={item.namee} />
-              </Grid>)
-          })}
+          {projects.map(item => item.filtered === true ? 
+            <Grid item className="images" key={item.name} data-class={item.dataClass} xs={12} sm={6} md={4}>
+              <img src={item.src} alt={item.name} />
+            </Grid>
+            : '')}
         </Grid>
       </section>
     </Layout>
