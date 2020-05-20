@@ -42,7 +42,8 @@ const IndexPage = () => {
           <Grid item xs={12} sm={5}>
             <h2>Travel</h2>
             <p className="caption">A few snapshots of where I’ve been</p>
-            <ButtonLink href="/travel">Learn More</ButtonLink>
+            <ButtonLink 
+              href="https://vsco.co/aylin-marie/journal/p/1" target="_blank" rel="noreferrer">Learn More</ButtonLink>
             <img className={stylesheet.travelAccent} src={travelAccent} alt="" />
           </Grid>
         </Grid>

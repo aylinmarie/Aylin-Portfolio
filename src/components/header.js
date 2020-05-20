@@ -15,11 +15,10 @@ const Header = () => (
       >
           About
       </Link>
-      <Link
-        to="/travel"
-      >
+      <a
+        href="https://vsco.co/aylin-marie/journal/p/1" target="_blank" rel="noreferrer"      >
           Travel
-      </Link>
+      </a>
       <Link
         to="/portfolio"
       >

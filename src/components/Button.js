@@ -13,9 +13,9 @@ Button.propTypes = {
   onClick: PropTypes.func,
 };
 
-export const ButtonLink = ({children, href})=> {
+export const ButtonLink = ({children, href, ...rest})=> {
   return(
-    <a href={href} className={stylesheet.root}>{children}</a>
+    <a href={href} className={stylesheet.root} {...rest}>{children}</a>
   )
 }
 
