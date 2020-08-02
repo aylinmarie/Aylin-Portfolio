@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import Grid from '@material-ui/core/Grid';
+import { motion } from "framer-motion"
 
 import stylesheet from './portfolio.module.less'
 
