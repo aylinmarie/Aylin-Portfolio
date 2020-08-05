@@ -34,37 +34,37 @@ const IndexPage = () => {
         </Grid>
       </section>
 
-  
-
-      <section id="portfolio" className={stylesheet.portfolio}>
+      <section id="travel" className={stylesheet.travel}>
         <Grid container spacing={10}>
+          <Grid item xs={12} sm={7}>
+            <img src={portfolioPic} alt="Camille Simone logo" />
+          </Grid>
           <Grid item xs={12} sm={5}>
             <h2>Portfolio</h2>
             <p className="caption">My work in design and development</p>
             <Button href="/portfolio">My Work</Button>
-            <img className={stylesheet.portfolioAccent1} src={portfolioAccent1} alt="" />
-          </Grid>
-          <Grid item xs={12} sm={7}>
-            <img src={portfolioPic} alt="Camille Simone logo" />
-            <img className={stylesheet.portfolioAccent2} src={portfolioAccent2} alt="" />
+            <img className={stylesheet.travelAccent} src={travelAccent} alt="" />
           </Grid>
         </Grid>
       </section>
 
-      <section id="travel" className={stylesheet.travel}>
+      <section id="portfolio" className={stylesheet.portfolio}>
         <Grid container spacing={10}>
-          <Grid item xs={12} sm={7}>
-            <img src={travelPic} alt="Winslow building in Helsinki, Finland" />
-          </Grid>
           <Grid item xs={12} sm={5}>
             <h2>Travel</h2>
             <p className="caption">A few snapshots of where I’ve been</p>
             <Button 
               href="https://vsco.co/aylin-marie/journal/p/1" target="_blank" rel="noreferrer">Travel Journal</Button>
-            <img className={stylesheet.travelAccent} src={travelAccent} alt="" />
+            <img className={stylesheet.portfolioAccent1} src={portfolioAccent1} alt="" />
+          </Grid>
+          <Grid item xs={12} sm={7}>
+            <img src={travelPic} alt="Winslow building in Helsinki, Finland" />
+            <img className={stylesheet.portfolioAccent2} src={portfolioAccent2} alt="" />
           </Grid>
         </Grid>
       </section>
+
+      
     </Layout>
   )}
 
