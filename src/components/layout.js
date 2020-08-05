@@ -26,6 +26,7 @@ const Layout = ({ children }) => {
               <a href="https://www.instagram.com/aylinmcg/" target="_blank" rel="noreferrer">Instagram</a>
             </Grid>
             <Grid item>
+              <a href="/privacy">Privacy Policy</a>
               <p>© {new Date().getFullYear()} aylin marie</p>
             </Grid>
           </Grid>

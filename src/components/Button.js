@@ -1,25 +1,29 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import cx from 'classnames';
 import stylesheet from './Button.module.less';
 
-export const Button = ({children, onClick})=> {
-  return(
-    <button onClick={onClick} className={stylesheet.root}>{children}</button>
-  )
-}
+const Button = ({ children, href, onClick, type, ...rest }) => {
+  const classList = cx(stylesheet.root, stylesheet[type]);
+  const Element = href ? 'a' : 'button';
+  const props = href ? { href: href, ...rest } : { onClick: onClick };
+
+  if (Element === 'a' && props.target === '_blank') {
+    props.rel = 'noreferrer noopener';
+  }
+
+  return (
+    <Element className={classList} {...props}>
+      {children}
+    </Element>
+  );
+};
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func,
-};
-
-export const ButtonLink = ({children, href, ...rest})=> {
-  return(
-    <a href={href} className={stylesheet.root} {...rest}>{children}</a>
-  )
-}
-
-ButtonLink.propTypes = {
-  children: PropTypes.node.isRequired,
   href: PropTypes.string,
+  type: PropTypes.oneOf(['primary', 'secondary', 'tertiary']).isRequired,
 };
+
+export default Button;

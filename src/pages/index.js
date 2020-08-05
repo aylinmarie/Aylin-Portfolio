@@ -3,7 +3,7 @@ import React from "react"
 import Grid from '@material-ui/core/Grid';
 
 import Layout from "../components/layout"
-import { ButtonLink } from "../components/Button"
+import Button from "../components/Button"
 import SEO from "../components/seo"
 import stylesheet from './home.module.less';
 
@@ -26,10 +26,27 @@ const IndexPage = () => {
           <Grid item xs={12} sm={5}>
             <h1>Merhaba, I'm Aylin</h1>
             <p className="caption">I’m an Atlanta based designer and developer who loves creating clean and minimal designs.</p>
-            <ButtonLink href="/about">About Me</ButtonLink>
+            <Button href="/about">About Me</Button>
           </Grid>
           <Grid item xs={12} sm={7}>
             <img src={mainPic} alt="Headshot of Aylin" />
+          </Grid>
+        </Grid>
+      </section>
+
+  
+
+      <section id="portfolio" className={stylesheet.portfolio}>
+        <Grid container spacing={10}>
+          <Grid item xs={12} sm={5}>
+            <h2>Portfolio</h2>
+            <p className="caption">My work in design and development</p>
+            <Button href="/portfolio">My Work</Button>
+            <img className={stylesheet.portfolioAccent1} src={portfolioAccent1} alt="" />
+          </Grid>
+          <Grid item xs={12} sm={7}>
+            <img src={portfolioPic} alt="Camille Simone logo" />
+            <img className={stylesheet.portfolioAccent2} src={portfolioAccent2} alt="" />
           </Grid>
         </Grid>
       </section>
@@ -42,24 +59,9 @@ const IndexPage = () => {
           <Grid item xs={12} sm={5}>
             <h2>Travel</h2>
             <p className="caption">A few snapshots of where I’ve been</p>
-            <ButtonLink 
-              href="https://vsco.co/aylin-marie/journal/p/1" target="_blank" rel="noreferrer">Learn More</ButtonLink>
+            <Button 
+              href="https://vsco.co/aylin-marie/journal/p/1" target="_blank" rel="noreferrer">Travel Journal</Button>
             <img className={stylesheet.travelAccent} src={travelAccent} alt="" />
-          </Grid>
-        </Grid>
-      </section>
-
-      <section id="portfolio" className={stylesheet.portfolio}>
-        <Grid container spacing={10}>
-          <Grid item xs={12} sm={5}>
-            <h2>Portfolio</h2>
-            <p className="caption">My work in design and development</p>
-            <ButtonLink href="/portfolio">My Work</ButtonLink>
-            <img className={stylesheet.portfolioAccent1} src={portfolioAccent1} alt="" />
-          </Grid>
-          <Grid item xs={12} sm={7}>
-            <img src={portfolioPic} alt="Camille Simone logo" />
-            <img className={stylesheet.portfolioAccent2} src={portfolioAccent2} alt="" />
           </Grid>
         </Grid>
       </section>

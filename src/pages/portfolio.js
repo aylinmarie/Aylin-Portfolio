@@ -2,9 +2,9 @@ import React, {useEffect, useState} from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Banner from '../components/Banner'
 
 import Grid from '@material-ui/core/Grid';
-import { motion } from "framer-motion"
 
 import stylesheet from './portfolio.module.less'
 
@@ -34,10 +34,10 @@ const Portfolio = () => {
   return (
     <Layout>
       <SEO title="Portfolio" />
-      <section className={stylesheet.banner}>
+      <Banner>
         <h1>Portfolio</h1>
         <p className="h3">My work</p>
-      </section>
+      </Banner>
       <section>
         <ul className={stylesheet.nav}>
           <li className="h3" active={(filter === 'all').toString()} onClick={() => setFilter('all')}>All</li>
