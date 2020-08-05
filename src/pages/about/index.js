@@ -1,15 +1,14 @@
 import React from "react"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
 import Grid from '@material-ui/core/Grid';
 
-import stylesheet from './about.module.less';
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
 
-import aboutPic from '../images/about_pic.png';
-import aboutPic2 from '../images/about_pic_2.jpg';
-import aboutAccent from '../images/about_accent.svg';
+import stylesheet from './About.module.less';
+
+import aboutPic from '../../images/about_pic.png';
+import aboutPic2 from '../../images/about_pic_2.jpg';
+import aboutAccent from '../../images/about_accent.svg';
 
 const About = () => (
   <Layout>
@@ -34,7 +33,7 @@ const About = () => (
             <figcaption>Photo by <a href="http://jamiltmcginnis.com/" target="_blank" rel="noreferrer">Jamil McGinnis</a></figcaption>
           </figure>
         </Grid>
-        <Grid item sm={5} xs={12} style={{textAlign: "center"}}>
+        <Grid item sm={5} xs={12} style={{ textAlign: "center" }}>
           <p className="h3">What else?</p>
           <p><a href="http://www.oneyoungtraveler.co" target="_blank" rel="noreferrer">Founder of OneYoungTraveler LLC</a></p>
           <p><a href="https://generalassemb.ly/instructors/aylin-mcginnis/15542" target="_blank" rel="noreferrer">General Assembly Workshop Instructor</a></p>

@@ -1,17 +1,17 @@
 import React, {useEffect, useState} from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Banner from '../components/Banner'
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import Banner from '../../components/Banner'
 
 import Grid from '@material-ui/core/Grid';
 
-import stylesheet from './portfolio.module.less'
+import stylesheet from './Portfolio.module.less'
 
 // Images
-import aylin from '../images/portfolio/aylin_portfolio.png'
-import bor from '../images/portfolio/bor_portfolio.png'
-import oyt from '../images/portfolio/oyt_portfolio.png'
+import aylin from '../../images/portfolio/aylin_portfolio.png'
+import bor from '../../images/portfolio/bor_portfolio.png'
+import oyt from '../../images/portfolio/oyt_portfolio.png'
 
 const PortfolioItems = [
   {name:'Aylin Marie', src: aylin, category:['all','design'],},

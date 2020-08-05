@@ -1,8 +1,8 @@
 import React from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Banner from '../components/Banner'
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import Banner from '../../components/Banner'
 
 import stylesheet from './Privacy.module.less';
 
