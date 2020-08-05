@@ -9,13 +9,14 @@ import stylesheet from './Home/Home.module.less';
 
 // Images
 import mainPic from '../images/pic_main.jpg';
-import portfolioPic from '../images/portfolio_main.png';
+import portfolioPic from '../images/portfolio_preview1.png';
+import portfolioPic2 from '../images/portfolio_preview2.png';
 import travelPic from '../images/travel_main.jpg';
 
 // Section Illustrations
-import travelAccent from '../images/travel_accent.svg';
-import portfolioAccent1 from '../images/portfolio_accent_1.svg';
-import portfolioAccent2 from '../images/portfolio_accent_2.svg';
+import accent0 from '../images/travel_accent.svg';
+import accent1 from '../images/portfolio_accent_1.svg';
+import accent2 from '../images/portfolio_accent_2.svg';
 
 const IndexPage = () => {
   return (
@@ -34,32 +35,33 @@ const IndexPage = () => {
         </Grid>
       </section>
 
-      <section id="travel" className={stylesheet.travel}>
+      <section id="travel" className={stylesheet.portfolio}>
         <Grid container spacing={10}>
           <Grid item xs={12} sm={7}>
-            <img src={portfolioPic} alt="Camille Simone logo" />
+            <img src={portfolioPic} alt="Camille Simone brand desktop view" />
+            <img src={portfolioPic2} alt="Camille Simone brand mobile view" />
           </Grid>
           <Grid item xs={12} sm={5}>
             <h2>Portfolio</h2>
             <p className="caption">My work in design and development</p>
             <Button type="primary" href="/portfolio">My Work</Button>
-            <img className={stylesheet.travelAccent} src={travelAccent} alt="" />
+            <img className={stylesheet.accent0} src={accent0} alt="" />
           </Grid>
         </Grid>
       </section>
 
-      <section id="portfolio" className={stylesheet.portfolio}>
+      <section id="portfolio" className={stylesheet.travel}>
         <Grid container spacing={10}>
           <Grid item xs={12} sm={5}>
             <h2>Travel</h2>
             <p className="caption">A few snapshots of where I’ve been</p>
             <Button type="primary" 
               href="https://vsco.co/aylin-marie/journal/p/1" target="_blank" rel="noreferrer">Travel Journal</Button>
-            <img className={stylesheet.portfolioAccent1} src={portfolioAccent1} alt="" />
+            <img className={stylesheet.accent1} src={accent1} alt="" />
           </Grid>
           <Grid item xs={12} sm={7}>
             <img src={travelPic} alt="Winslow building in Helsinki, Finland" />
-            <img className={stylesheet.portfolioAccent2} src={portfolioAccent2} alt="" />
+            <img className={stylesheet.accent2} src={accent2} alt="" />
           </Grid>
         </Grid>
       </section>

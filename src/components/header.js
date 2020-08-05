@@ -15,15 +15,15 @@ const Header = () => (
       >
           About
       </Link>
-      <a
-        href="https://vsco.co/aylin-marie/journal/p/1" target="_blank" rel="noreferrer"      >
-          Travel
-      </a>
       <Link
         to="/portfolio"
       >
           Portfolio
       </Link>
+      <a
+        href="https://vsco.co/aylin-marie/journal/p/1" target="_blank" rel="noreferrer"      >
+          Travel
+      </a>
     </nav>
   </header>
 )
