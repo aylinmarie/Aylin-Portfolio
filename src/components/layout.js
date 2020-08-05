@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-
+import { Link } from "gatsby"
 import Grid from '@material-ui/core/Grid';
 
 import Header from "./header"
@@ -26,7 +26,11 @@ const Layout = ({ children }) => {
               <a href="https://www.instagram.com/aylinmcg/" target="_blank" rel="noreferrer">Instagram</a>
             </Grid>
             <Grid item>
-              <a href="/privacy">Privacy Policy</a>
+              <Link
+                to="/privacy"
+              >
+          Privacy Policy
+              </Link>
               <p>© {new Date().getFullYear()} aylin marie</p>
             </Grid>
           </Grid>
