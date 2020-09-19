@@ -1,4 +1,6 @@
 import React from "react"
+import { graphql } from 'gatsby'
+import Img from "gatsby-image";
 
 import Grid from '@material-ui/core/Grid';
 
@@ -7,18 +9,14 @@ import Button from "../components/Button"
 import SEO from "../components/seo"
 import stylesheet from './Home/Home.module.less';
 
-// Images
-import mainPic from '../images/pic_main.jpg';
-import portfolioPic from '../images/portfolio_preview1.png';
-import portfolioPic2 from '../images/portfolio_preview2.png';
-import travelPic from '../images/travel_main.jpg';
-
 // Section Illustrations
 import accent0 from '../images/travel_accent.svg';
 import accent1 from '../images/portfolio_accent_1.svg';
 import accent2 from '../images/portfolio_accent_2.svg';
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  const { mainPic, portfolioPic, portfolioPic2, travelPic } = data;
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -30,7 +28,7 @@ const IndexPage = () => {
             <Button type="primary" href="/about">About Me</Button>
           </Grid>
           <Grid item xs={12} sm={7}>
-            <img src={mainPic} alt="Headshot of Aylin" />
+            <Img fluid={mainPic.childImageSharp.fluid} alt="Headshot of Aylin" />
           </Grid>
         </Grid>
       </section>
@@ -38,8 +36,8 @@ const IndexPage = () => {
       <section id="travel" className={stylesheet.portfolio}>
         <Grid container spacing={10}>
           <Grid item xs={12} sm={7}>
-            <img src={portfolioPic} alt="Camille Simone brand desktop view" />
-            <img src={portfolioPic2} alt="Camille Simone brand mobile view" />
+            <Img fluid={portfolioPic.childImageSharp.fluid} alt="Camille Simone brand desktop view" />
+            <Img fluid={portfolioPic2.childImageSharp.fluid} alt="Camille Simone brand mobile view" />
           </Grid>
           <Grid item xs={12} sm={5}>
             <h2>Portfolio</h2>
@@ -60,7 +58,7 @@ const IndexPage = () => {
             <img className={stylesheet.accent1} src={accent1} alt="" />
           </Grid>
           <Grid item xs={12} sm={7}>
-            <img src={travelPic} alt="Winslow building in Helsinki, Finland" />
+            <Img fluid={travelPic.childImageSharp.fluid} alt="Winslow building in Helsinki, Finland" />
             <img className={stylesheet.accent2} src={accent2} alt="" />
           </Grid>
         </Grid>
@@ -69,3 +67,63 @@ const IndexPage = () => {
   )}
 
 export default IndexPage
+
+export const HomeQuery = graphql`
+query HomeQuery {
+  mainPic: file(relativePath: {eq: "pic_main.jpg"}) {
+    id
+    base
+    childImageSharp {
+      fluid {
+        base64 
+        aspectRatio 
+        src 
+        srcSet 
+        sizes 
+      }
+    }
+  }
+
+  portfolioPic: file(relativePath: {eq: "portfolio_preview1.png"}) {
+    id
+    base
+    childImageSharp {
+      fluid {
+        base64 
+        aspectRatio 
+        src 
+        srcSet 
+        sizes 
+      }
+    }
+  }
+
+  portfolioPic2: file(relativePath: {eq: "portfolio_preview2.png"}) {
+    id
+    base
+    childImageSharp {
+      fluid {
+        base64 
+        aspectRatio 
+        src 
+        srcSet 
+        sizes 
+      }
+    }
+  }
+
+  travelPic: file(relativePath: {eq: "travel_main.jpg"}) {
+    id
+    base
+    childImageSharp {
+      fluid {
+        base64 
+        aspectRatio 
+        src 
+        srcSet 
+        sizes 
+      }
+    }
+  }
+}
+`

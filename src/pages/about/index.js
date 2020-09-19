@@ -67,7 +67,7 @@ const About = ({data}) => {
 
 export default About
 
-export const aboutquery = graphql`
+export const AboutQuery = graphql`
 query AboutQuery {
   aboutpic: file(relativePath: {eq: "about/about_pic.png"}) {
     id
