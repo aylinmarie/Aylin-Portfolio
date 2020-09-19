@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from 'gatsby'
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
@@ -8,7 +9,6 @@ import Grid from '@material-ui/core/Grid';
 
 import stylesheet from './Portfolio.module.less'
 import Img from  'gatsby-image'
-import { graphql } from 'gatsby'
 
 const Portfolio = ({data}) => { 
   return (
@@ -22,8 +22,8 @@ const Portfolio = ({data}) => {
       <section>
         <Grid container className={stylesheet.gallery} spacing={4}>
           {data.allFile.edges.map(({node}) => 
-            <Grid item xs={12} sm={6} md={4}>
-              <Img fluid={node.childImageSharp.fluid} />
+            <Grid item xs={12} sm={6} md={4} key={node.base}>
+              <Img fluid={node.childImageSharp.fluid} alt={node.alt}/>
             </Grid>
           )}
         </Grid>
