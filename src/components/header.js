@@ -21,7 +21,7 @@ const Header = () => (
           Portfolio
       </Link>
       <a
-        href="https://vsco.co/aylin-marie/journal/p/1" target="_blank" rel="noreferrer"      >
+        href="https://vsco.co/aylin-marie/journal/p/1" target="_blank" rel="noreferrer">
           Travel
       </a>
     </nav>
